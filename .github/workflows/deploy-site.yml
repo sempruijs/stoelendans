@@ -2,7 +2,7 @@ name: deploy-site
 on:
   push:
     branches: [ "main" ]
-
+    
 jobs:
   build-website:
     runs-on: ubuntu-latest
@@ -14,8 +14,8 @@ jobs:
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v1
         with:
-        path: './public'
-
+          path: './public'
+      
   deploy:
     needs: build-website
 
