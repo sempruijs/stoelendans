@@ -2,5 +2,5 @@
 
 ## namen
 
-Sem Pruijs
-Binx Bruinier
+- Sem Pruijs
+- Binx Bruinier
