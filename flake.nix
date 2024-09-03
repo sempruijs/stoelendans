@@ -32,8 +32,7 @@
               mkdir $out
               mkdir $out/ts
               cp ./index.html $out
-              # cp -r ./css $out/css
-              # cp -r ./content $out
+              cp -r ./css $out/css
               cp ./ts/index.js $out/ts
             '';
           };
