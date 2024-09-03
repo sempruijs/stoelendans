@@ -2,4 +2,6 @@
 
 ## namen
 
-Sem Pruijs
+- Sem Pruijs
+- Binx Bruinier
+- Jisse Brus
