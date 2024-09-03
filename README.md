@@ -5,5 +5,5 @@
 - Sem Pruijs
 - Binx Bruinier
 - Jisse Brus
-- Thomas Dekker
+- Thomas Dekker (20)
 - Duain Crasto
