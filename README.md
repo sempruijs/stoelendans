@@ -2,7 +2,7 @@
 
 ## namen
 
-- Sem Pruijs
+- Sem Pruijs (19)
 - Binx Bruinier
 - Jisse Brus
 - Thomas Dekker (20)
