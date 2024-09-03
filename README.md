@@ -4,3 +4,4 @@
 
 - Sem Pruijs
 - Binx Bruinier
+- Jisse Brus
