@@ -23,18 +23,18 @@
             src = ./site;
             name = "site";
             buildPhase = ''
-              # cd ts
-              # tsc --build
-              # cd ..
+              cd ts
+              tsc --build
+              cd ..
             '';
 
             installPhase = ''
               mkdir $out
-              # mkdir $out/ts
+              mkdir $out/ts
               cp ./index.html $out
               # cp -r ./css $out/css
               # cp -r ./content $out
-              # cp ./ts/index.js $out/ts
+              cp ./ts/index.js $out/ts
             '';
           };
         };
