@@ -35,6 +35,8 @@
             installPhase = ''
               mkdir $out
               mkdir $out/ts
+              mkdir $out/images
+              cp ./images/favicon.ico $out/images/favicon.ico
               cp ./index.html $out
               cp -r ./css $out/css
               cp ./ts/index.js $out/ts
