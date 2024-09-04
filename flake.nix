@@ -12,7 +12,11 @@
       perSystem = { config, self', inputs', pkgs, system, ... }: {
         devShells = {
           default = pkgs.mkShell {
-              buildInputs = with pkgs; [ nodePackages.typescript nodePackages.typescript-language-server];
+              buildInputs = with pkgs; [
+                nodePackages.typescript
+                nodePackages.typescript-language-server
+                nodePackages.cspell
+              ];
           };
         };
         packages = rec {
