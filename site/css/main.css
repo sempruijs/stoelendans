@@ -1,3 +1,26 @@
-body {
-    font-size: 25pt;
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
+
+body {
+   
+}
+
+.container{
+    border-style: solid;
+    width: 175px;
+    padding: 0.5em;
+    margin: 1em;
+    margin-left: 0.5em;
+    color: purple
+
+}
+
+{
+    font-size: 15pt;
+
+}
+
+
