@@ -1,6 +1,6 @@
 // cSpell Settings
 {
-    // Version of the setting file.  Always 0.2
+    // Version of the setting file. Always 0.2
     "version": "0.2",
     // language - current active spelling language
     "language": "en",
@@ -23,7 +23,25 @@
         "deze",
         "kennen",
         "beter",
-        "elkaar"
+        "elkaar",
+        "box-sizing",
+        "sans-serif",
+        "column",
+        "border-box",
+        "container",
+        "border-radius",
+        "box-shadow",
+        "rgba",
+        "h1",
+        "rem",
+        "cursor",
+        "outline",
+        "media",
+        "max-width",
+        "UTF-8",
+        "stylesheet",
+        "index",
+        "next_question"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.
