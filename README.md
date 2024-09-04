@@ -2,6 +2,13 @@
 
 ## contributing
 
+### Contribute to questions
+
+If you find a spell mistake for q question, please [submit an issue](https://github.com/sempruijs/stoelendans/issues/new) regarding the question and a solution.
+You can also submit a pull request yourself by updating ```questions.ts```
+
+All ideas for interesting questions are welcome.
+
 ### install dependencies
 
 Run the following command to install all dependencies
