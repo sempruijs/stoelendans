@@ -1,5 +1,5 @@
 {
-  description = "Website for intresting questions.";
+  description = "Website to get to know each other better";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/release-22.05";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -36,6 +36,20 @@
               cp ./ts/index.js $out/ts
             '';
           };
+        };
+        checks = {
+            spellcheck = pkgs.stdenv.mkDerivation {
+              name = "spellcheck";
+              dontUnpack = true;
+              src = ./.;
+              buildInputs = [ pkgs.nodePackages.cspell ];
+              doCheck = true;
+              checkPhase = ''
+                cd $src/.
+                cspell lint --no-progress "**"
+                touch $out
+              '';
+            };
         };
       };
       flake = {};

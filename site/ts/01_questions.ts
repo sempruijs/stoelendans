@@ -1,3 +1,4 @@
+// cSpell:disable
 const questions = [
 "Wat is je favoriete herinnering uit je kindertijd?",
 "Als je een superkracht kon hebben, welke zou dat zijn?",
@@ -100,3 +101,4 @@ const questions = [
 "Wat is je favoriete kledingstuk?",
 "Wat zou je doen als je morgen geen verplichtingen had?"
 ]
+/* cSpell:enable */
