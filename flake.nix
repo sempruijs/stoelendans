@@ -1,7 +1,7 @@
 {
   description = "Website to get to know each other better";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-22.05";
+    nixpkgs.url = "github:NixOS/nixpkgs?rev=75a5ebf473cd60148ba9aec0d219f72e5cf52519";
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
