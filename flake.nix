@@ -38,6 +38,7 @@
               mkdir $out/images
               cp ./images/favicon.ico $out/images/favicon.ico
               cp ./index.html $out
+              cp ./friday-night.html $out
               cp -r ./css $out/css
               cp ./ts/index.js $out/ts
             '';
