@@ -13,7 +13,7 @@ function show_mc_question(q: MultipleChoice) {
 }
 
 function set_button_container(html_code: string) {
-    document.getElementById("button_container").textContent = html_code;
+    document.getElementById("button_container").innerHTML = html_code;
 }
 
 function next_mc_question() {
