@@ -7,15 +7,21 @@
 
 /* Ensure the body takes up the full height of the viewport */
 html, body {
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    flex-direction: column; /* Zorgt ervoor dat alles onder elkaar komt */
-    text-align: center;
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjc1MHpqejQxN2ppNTh0YnljeGlhOW1oeTR4ZTMyODB6d2htMTIxNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26AHMBTzc1qJgFfDW/giphy.gif'); /* Zorg dat dit pad correct is */
+    background-size: cover;      /* Zorgt ervoor dat de afbeelding het hele scherm vult */
+    background-position: center; /* Centreert de achtergrond op alle apparaten */
+    background-repeat: no-repeat; /* Voorkomt dat de achtergrond herhaald wordt */
+    background-attachment: fixed; /* Zorgt ervoor dat de achtergrond vast blijft bij scrollen (optioneel) */
+    height: 100vh; /* Zorgt ervoor dat de achtergrond de volledige hoogte van het scherm vult */
+    margin: 0;
+    padding: 0;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        flex-direction: column; /* Zorgt ervoor dat alles onder elkaar komt */
+        text-align: center;
 }
 
 /* Container styling */
@@ -25,15 +31,13 @@ html, body {
     border-radius: 10px;
     width: 300px;
     padding: 1.5em;
-    margin: 1em 0; 
-=======
     margin: 1em 0; /* Verticaal marges tussen containers */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling for header (question area) */
 header.container {
-    background-color: #f0f0f0;
+    background-color: #f7f7f7;
     border: none;
 }
 
@@ -85,4 +89,20 @@ button:hover {
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
     }
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
 }
