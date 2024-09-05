@@ -1,6 +1,6 @@
 interface MultipleChoice {
-    question: String;
-    right_answer: String;
-    wrong_answers: String[];
+    question: string;
+    right_answer: string;
+    wrong_answers: string[];
 }
 
