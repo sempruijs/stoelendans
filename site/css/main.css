@@ -57,16 +57,17 @@ main.container p {
 
 /* Button styling */
 button {
-    background-color: #6a0dad;
+    background-color: #700cb7;
     color: white;
-    border: none;
+    border: 3px solid black;
     padding: 0.75rem 1.5rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
-    margin-top: 1em;
+    margin-top: 1em; 
+
 }
 
 /* Button hover effect */
