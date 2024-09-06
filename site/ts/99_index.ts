@@ -48,8 +48,8 @@ function generate_button(answer: string, is_right: boolean): string {
 
 function generate_buttons(q: MultipleChoice): string {
     var buttons: string[] = [];
-    for (var wrong_anser of q.wrong_answers) {
-        let button = generate_button(wrong_anser, false)
+    for (var wrong_answer of q.wrong_answers) {
+        let button = generate_button(wrong_answer, false)
         buttons.push(button)
     }
 

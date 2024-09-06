@@ -7,12 +7,12 @@
 
 /* Ensure the body takes up the full height of the viewport */
 html, body {
-    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjc1MHpqejQxN2ppNTh0YnljeGlhOW1oeTR4ZTMyODB6d2htMTIxNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26AHMBTzc1qJgFfDW/giphy.gif'); /* Zorg dat dit pad correct is */
-    background-size: cover;      /* Zorgt ervoor dat de afbeelding het hele scherm vult */
-    background-position: center; /* Centreert de achtergrond op alle apparaten */
-    background-repeat: no-repeat; /* Voorkomt dat de achtergrond herhaald wordt */
-    background-attachment: fixed; /* Zorgt ervoor dat de achtergrond vast blijft bij scrollen (optioneel) */
-    height: 100vh; /* Zorgt ervoor dat de achtergrond de volledige hoogte van het scherm vult */
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjc1MHpqejQxN2ppNTh0YnljeGlhOW1oeTR4ZTMyODB6d2htMTIxNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26AHMBTzc1qJgFfDW/giphy.gif'); /* Sets the path to the background image */
+    background-size: cover;      /* Makes sure that the images fills the entire screen*/
+    background-position: center; /* Center background image */
+    background-repeat: no-repeat; /* prevents background image from repeating */
+    background-attachment: fixed; /* Makes sure that the background images stays in place while scrolling (optional)*/
+    height: 100vh; /* responsible for setting the correct height for the background image*/
     margin: 0;
     padding: 0;
         font-family: 'Roboto', sans-serif;
@@ -31,7 +31,7 @@ html, body {
     border-radius: 10px;
     width: 300px;
     padding: 1.5em;
-    margin: 1em 0; /* Verticaal marges tussen containers */
+    margin: 1em 0; /* Vertical margins between containers */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -66,7 +66,7 @@ button {
     font-size: 1rem;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
-    margin-top: 1em; 
+    margin-top: 1em;
 
 }
 
