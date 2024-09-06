@@ -1,6 +1,6 @@
 interface MultipleChoice {
     question: string;
-    right_answer: string;
+    right_answers: string[];
     wrong_answers: string[];
 }
 

@@ -52,11 +52,13 @@ function generate_buttons(q: MultipleChoice): string {
         let button = generate_button(wrong_anser, false)
         buttons.push(button)
     }
-    let right_button = generate_button(q.right_answer, true)
-    buttons.push(right_button);
+
+    for (var right_answer of q.right_answers) {
+        let button = generate_button(right_answer, true)
+        buttons.push(button)
+    }
 
     //TODO: randomize order buttons
-
     var result = "";
 
     for (var button of buttons) {
