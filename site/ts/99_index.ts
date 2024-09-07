@@ -5,11 +5,11 @@ function next_question() {
 }
 
 function show_question(s: string) {
-    document.getElementById("question").textContent=s;
+    document.getElementById("question").textContent = s;
 }
 
 function show_mc_question(q: MultipleChoice) {
-    document.getElementById("mc_question").textContent=q.question;
+    document.getElementById("mc_question").textContent = q.question;
 }
 
 function set_button_container(html_code: string) {
@@ -39,33 +39,21 @@ function next_mc_question() {
     reset_correctness();
 }
 
-function generate_button(answer: string, is_right: boolean): string {
-    if (is_right) {
-        return "<button onclick=\"show_correctness(true)\">" + answer + "</button>";
+function generate_button(answer: Answer): string {
+    if (answer.is_correct) {
+        return "<button onclick=\"show_correctness(true)\">" + answer.value + "</button>";
     }
-    return "<button onclick=\"show_correctness(false)\")\">" + answer + "</button>";
+    return "<button onclick=\"show_correctness(false)\")\">" + answer.value + "</button>";
 }
 
-function generate_buttons(q: MultipleChoice): string {
-    var buttons: string[] = [];
-    for (var wrong_answer of q.wrong_answers) {
-        let button = generate_button(wrong_answer, false)
-        buttons.push(button)
-    }
+function generate_buttons(mc: MultipleChoice): string {
+    const buttons: string[] = mc.answers.map(a => {
+        return generate_button(a);
+    });
 
-    for (var right_answer of q.right_answers) {
-        let button = generate_button(right_answer, true)
-        buttons.push(button)
-    }
+    const shuffled_buttons = shuffleArray(buttons);
 
-    //TODO: randomize order buttons
-    var result = "";
-
-    for (var button of buttons) {
-        result += button;
-    }
-
-    return result;
+    return shuffled_buttons.join();
 }
 
 function random_element<T>(xs: T[]): T {
