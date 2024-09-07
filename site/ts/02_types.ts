@@ -1,6 +1,10 @@
 interface MultipleChoice {
     question: string;
-    right_answers: string[];
-    wrong_answers: string[];
+    answers: Answer[];
+}
+
+interface Answer {
+    value: string,
+    is_correct: boolean
 }
 
