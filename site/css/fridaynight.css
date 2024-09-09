@@ -31,7 +31,6 @@ html, body {
     color: white; /* Ensures white text for better contrast */
 }
 
-
 /* Navigation bar styling */
 nav {
     width: 100%;
@@ -68,7 +67,6 @@ nav ul li a:hover {
     border-radius: 5px; /* Rounded corners on hover */
     color: #FFF;
 }
-
 
 /* General text styling */
 h1, p {
@@ -205,4 +203,11 @@ button[type="button"]:hover {
         background-color: #BB86FC;
         color: black;
     }
+
 }
+
+}
+
+}
+
+
