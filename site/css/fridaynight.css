@@ -227,8 +227,8 @@ button[type="button"]:hover {
 
 .beer-drop {
     position: absolute;
-    width: 50px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
+    width: 468px
+    height: 801px; 
     background: url('https://e7.pngegg.com/pngimages/101/35/png-clipart-beer-icon-design-icon-beer-clear-glass-beer-mug-with-beer-food-beer-bottle-thumbnail.png') no-repeat;
     background-size: cover;
     opacity: 0.8;
