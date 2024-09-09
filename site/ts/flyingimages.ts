@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Verwijder de afbeelding na het beëindigen van de animatie
         image.addEventListener('animationend', () => {
-            flyingImagesContainer.removeChild(image);
+            // Verwijder de afbeelding als de animatie is afgelopen
+            if (flyingImagesContainer.contains(image)) {
+                flyingImagesContainer.removeChild(image);
+            }
         });
     }
 
