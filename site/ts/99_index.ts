@@ -18,24 +18,34 @@ function set_button_container(html_code: string) {
 
 function next_mc_question() {
     let random_question: MultipleChoice = random_element(mc_questions);
-    let guess_buttons = generate_guess_buttons(random_question)
-    set_button_container(guess_buttons)
+    set_button_container("")
+    generate_guess_buttons(random_question)
     show_mc_question(random_question)
 }
 
-function generate_guess_buttons(mc: MultipleChoice): string {
+function generate_guess_buttons(mc: MultipleChoice) {
     let guesses = mc_question_to_quesses(mc)
-    return guesses.map(g => {
-        return guess_to_button(g)
-    }).join("")
+    guesses.forEach(g => {
+        create_button(g)
+    })
 }
 
-function guess_to_button(guess: Guess): string {
-    let bla: string = "<button onclick=\"show_guess(guess)\">" + guess.guess.value + "</button>"
-    return bla
+function create_button(guess: Guess) {
+    const button = document.createElement("button");
+    button.textContent = guess.guess.value;
+
+    // Attach event listener to handle the guess
+    button.onclick = () => show_guess(guess);
+
+    // Append the button to a container
+    const container = document.getElementById("button_container");
+    if (container) {
+        container.appendChild(button);
+    }
 }
 
-function show_correctness(guess: Guess): string {
+// TODO: split generating buttons and writing buttons in seperate functions
+function show_guess(guess: Guess) {
     var buttons = "";
     for (var answer of guess.mc.answers) {
         const guessed_class = answer === guess.guess ? "guessed_answer" : ""
@@ -43,8 +53,7 @@ function show_correctness(guess: Guess): string {
         const button = "<button onclick\"\" class=\"" + correctness_class + " " + guessed_class + "\">" + answer.value + "</button>"
         buttons += button
     }
-
-    return buttons
+    set_button_container(buttons)
 }
 
 function random_element<T>(xs: T[]): T {
