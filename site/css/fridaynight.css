@@ -7,19 +7,95 @@
 
 /* Ensure the body takes up the full height of the viewport */
 html, body {
-    background-image: url('https://image.parool.nl/224418457/width/2480/peter-bout-marketingmanager-van-hotel-arena-voorheen-was-de'); /* Sets the path to the background image */
-    background-size: cover;      /* Makes sure that the images fills the entire screen*/
+    background-image: url('https://image.parool.nl/224418457/width/2480/peter-bout-marketingmanager-van-hotel-arena-voorheen-was-de'); /* Path to the background image */
+    background-size: cover;      /* Ensure background fills the screen */
     background-position: center; /* Center background image */
-    background-repeat: no-repeat; /* prevents background image from repeating */
-    background-attachment: fixed; /* Makes sure that the background images stays in place while scrolling (optional)*/
-    height: 100vh; /* responsible for setting the correct height for the background image*/
+    background-repeat: no-repeat; /* Prevents background image from repeating */
+    background-attachment: fixed; /* Background stays fixed while scrolling */
+    height: 100vh; /* Ensures correct height for the background image */
     margin: 0;
     padding: 0;
-        font-family: 'Roboto', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; 
-        flex-direction: column; /* Zorgt ervoor dat alles onder elkaar komt */
-        text-align: center;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;
+    color: white; /* Ensures white text for better contrast */
+}
+
+/* General text styling */
+h1, p {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow to text for readability on bright backgrounds */
+}
+
+/* Styling the container for buttons and content */
+#button_container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow around the container */
+}
+
+/* Button styling */
+button {
+    background-color: #5A189A; /* New deep purple */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    margin-top: 1em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #9D4EDD; /* Lighter purple on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 1em;
+    }
+
+    h1#mc_question {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #F3E9E9; /* Light, subtle background for light mode */
+        color: black;
+    }
+    button {
+        background-color: #5A189A;
+        color: white;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1A1A2E; /* Deep dark background for dark mode */
+        color: white;
+    }
+    button {
+        background-color: #BB86FC;
+        color: black;
+    }
 }
