@@ -20,6 +20,7 @@ function next_mc_question() {
     let random_question: MultipleChoice = random_element(mc_questions);
     let guess_buttons = generate_guess_buttons(random_question)
     set_button_container(guess_buttons)
+    show_mc_question(random_question)
 }
 
 function generate_guess_buttons(mc: MultipleChoice): string {
