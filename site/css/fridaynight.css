@@ -107,4 +107,19 @@ button[type="button"]:hover {
         background-color: #BB86FC;
         color: black;
     }
+    background-image: url('https://image.parool.nl/224418457/width/2480/peter-bout-marketingmanager-van-hotel-arena-voorheen-was-de'); /* Sets the path to the background image */
+    background-size: cover;      /* Makes sure that the images fills the entire screen*/
+    background-position: center; /* Center background image */
+    background-repeat: no-repeat; /* prevents background image from repeating */
+    background-attachment: fixed; /* Makes sure that the background images stays in place while scrolling (optional)*/
+    height: 100vh; /* responsible for setting the correct height for the background image*/
+    margin: 0;
+    padding: 0;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        flex-direction: column; /* Zorgt ervoor dat alles onder elkaar komt */
+        text-align: center;
 }
