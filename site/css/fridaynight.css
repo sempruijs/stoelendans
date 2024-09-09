@@ -24,6 +24,39 @@ html, body {
     color: white; /* Ensures white text for better contrast */
 }
 
+/* Container for flying images */
+#flying-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure it doesn't interfere with clicking other elements */
+    z-index: 500; /* Ensure it's behind main content but above background */
+    overflow: hidden; /* Hide overflowing images */
+}
+
+/* Flying image styling */
+.flying-image {
+    position: absolute;
+    width: 50px; /* Adjust image size as needed */
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    animation: fly linear infinite;
+}
+
+/* Flying animation */
+@keyframes fly {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    to {
+        transform: translate(100vw, 100vh) rotate(360deg);
+    }
+}
+
 /* Navigation bar styling */
 nav {
     width: 100%;
@@ -95,127 +128,4 @@ button {
 button:hover {
     background-color: #9D4EDD; /* Lighter purple on hover */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-}
-
-/* Responsive styling for smaller screens */
-@media (max-width: 400px) {
-    .container {
-        width: 90%;
-        padding: 1em;
-    }
-
-    h1#mc_question {
-        font-size: 1.5rem;
-    }
-
-    button {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-    }
-}
-
-/* Question styling */
-h1#mc_question {
-    font-size: 2rem; /* Bigger font size for visibility */
-    font-weight: bold;
-    color: #FFD700; /* Bright yellow for better contrast */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Stronger shadow for visibility */
-    margin-bottom: 1.5rem;
-}
-
-/* Styling individual answer buttons */
-#button_container button {
-    background-color: #FF6347; /* Tomato color for better contrast */
-    color: white;
-    border: 2px solid #FFF; /* White border for distinction */
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    outline: none;
-    margin: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    display: inline-block; /* Ensures buttons are side by side */
-}
-
-/* Button hover effect */
-#button_container button:hover {
-    background-color: #FF4500; /* Slightly darker on hover */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Main action button */
-button[type="button"] {
-    background-color: #1E90FF; /* Dodger blue for clear visibility */
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    outline: none;
-    margin-top: 1em;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Button hover effect */
-button[type="button"]:hover {
-    background-color: #1C86EE; /* Darker blue on hover */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Light mode */
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: #F3E9E9;
-        color: black;
-    }
-    button {
-        background-color: #5A189A;
-        color: white;
-    }
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1A1A2E;
-        color: white;
-    }
-    button {
-        background-color: #BB86FC;
-        color: black;
-    }
-}
-
-/* Flying images overlay styling */
-#flying-images {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Ensures it doesn't interfere with other elements */
-    z-index: 500; /* Make sure it's behind all other content except the background */
-    overflow: hidden; /* Hide any overflowing content */
-}
-
-.flying-image {
-    position: absolute;
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-    background-size: cover;
-    opacity: 0.8;
-    animation: fly linear;
-}
-
-@keyframes fly {
-    from {
-        transform: translateY(0) translateX(0);
-    }
-    to {
-        transform: translateY(-100vh) translateX(100vw); /* Adjust end position as needed */
-    }
 }
