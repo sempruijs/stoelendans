@@ -207,10 +207,12 @@ button[type="button"]:hover {
     from {
         transform: translateY(-100%);
     }
+
     to {
         transform: translateY(100%);
     }
 }
+
 
 .beer-drop {
     position: absolute;
