@@ -7,19 +7,12 @@
 
 /* Ensure the body takes up the full height of the viewport */
 html, body {
-
     background-image: url('https://image.parool.nl/224418457/width/2480/peter-bout-marketingmanager-van-hotel-arena-voorheen-was-de');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
-    background-image: url('https://image.parool.nl/224418457/width/2480/peter-bout-marketingmanager-van-hotel-arena-voorheen-was-de'); /* Path to the background image */
-    background-size: cover;      /* Ensure background fills the screen */
-    background-position: center; /* Center background image */
-    background-repeat: no-repeat; /* Prevents background image from repeating */
-    background-attachment: fixed; /* Background stays fixed while scrolling */
-    height: 100vh; /* Ensures correct height for the background image */
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -80,6 +73,7 @@ h1, p {
     background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow around the container */
+    z-index: 200; /* Ensure it is above other elements like buttons */
 }
 
 /* Button styling */
@@ -127,15 +121,6 @@ h1#mc_question {
     color: #FFD700; /* Bright yellow for better contrast */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Stronger shadow for visibility */
     margin-bottom: 1.5rem;
-}
-
-/* Styling the container for buttons and content */
-#button_container {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Styling individual answer buttons */
@@ -203,7 +188,6 @@ button[type="button"]:hover {
         background-color: #BB86FC;
         color: black;
     }
-
 }
 
 /* Beer rain overlay styling */
@@ -220,6 +204,9 @@ button[type="button"]:hover {
 
 /* Animation for beer rain */
 @keyframes rain {
+    from {
+        transform: translateY(-100%);
+    }
     to {
         transform: translateY(100%);
     }
@@ -227,8 +214,8 @@ button[type="button"]:hover {
 
 .beer-drop {
     position: absolute;
-    width: 468px
-    height: 801px; 
+    width: 50px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
     background: url('https://e7.pngegg.com/pngimages/101/35/png-clipart-beer-icon-design-icon-beer-clear-glass-beer-mug-with-beer-food-beer-bottle-thumbnail.png') no-repeat;
     background-size: cover;
     opacity: 0.8;
