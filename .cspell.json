@@ -41,7 +41,23 @@
         "UTF-8",
         "stylesheet",
         "index",
-        "next_question"
+        "next_question",
+        "Fout",
+        "Goed",
+        "Mijn",
+        "Amerika",
+        "vrijdag",
+        "avond",
+        "Verticaal",
+        "tussen",
+        "komt",
+        "onder",
+        "alles",
+        "ervoor",
+        "Zorgt",
+        "vult",
+        "scherm",
+        "hoogte"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.
