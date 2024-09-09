@@ -20,5 +20,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Maak elke 200ms een nieuwe vliegende afbeelding
-    setInterval(createFlyingImage, 200);
+    setInterval(createFlyingImage, 600);
 });
