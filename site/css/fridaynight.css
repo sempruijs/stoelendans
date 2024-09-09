@@ -96,6 +96,7 @@ nav ul li a:hover {
 
 /* General text styling */
 h1, p {
+    z-index: 1000;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow to text for readability on bright backgrounds */
 }
 
@@ -106,7 +107,7 @@ h1, p {
     background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow around the container */
-    z-index: 200; /* Ensure it is above other elements like buttons */
+    z-index: 1000; /* Ensure it is above other elements like buttons */
 }
 
 /* Button styling */
