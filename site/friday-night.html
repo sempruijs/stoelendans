@@ -1,36 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="nl">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Stoelendans | Vrijdag avond</title>
 
-        <!-- load css -->
+        <!-- Laad CSS -->
         <link rel="stylesheet" href="./css/fridaynight.css">
 
-        <!-- Load scripts -->
-        <script src="ts/index.js"></script>
-
-        <!-- load favicon -->
+        <!-- Laad favicon -->
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+        <!-- Laad het gegenereerde JavaScript van de TypeScript-bestanden -->
+        <script src="./ts/flyingimages.js" defer></script> 
+        <script src="./ts/index.js"></script>
+        
     </head>
     <body>
-        <body>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Kletspot</a></li>
-                    <li><a href="./friday-night.html">VRIJMIBO</a></li>
-                </ul>
-            </nav>
-            <!-- Existing content -->
-            <div>
-                <p><a href="./index.html">stoelendans</a></p>
-                <p><a href="./friday-night.html">vrijdag avond</a></p>
-            </div>
-            <!-- Rest of your code -->
-        </body>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Kletspot</a></li>
+                <li><a href="./friday-night.html">VRIJMIBO</a></li>
+            </ul>
+        </nav>
+
         <h1 id="mc_question">Vraag</h1>
         <div id="button_container"></div>
         <div id="correctness"></div>
         <button type="button" onclick="next_mc_question()">Geef mij een vraag</button>
+
+        <!-- Container voor vliegende afbeeldingen -->
+        <div id="flying-images"></div>
     </body>
 </html>
