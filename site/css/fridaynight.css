@@ -204,9 +204,11 @@ button[type="button"]:hover {
 
 /* Animation for beer rain */
 @keyframes rain {
+
     from {
         transform: translateY(-100%);
     }
+
     to {
         transform: translateY(100%);
     }
