@@ -1,30 +1,33 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Stoelendans | Vrijdag avond</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoelendans | Vrijdag avond</title>
 
-        <!-- load css -->
-        <link rel="stylesheet" href="./css/fridaynight.css">
+    <!-- load css -->
+    <link rel="stylesheet" href="./css/fridaynight.css">
 
-        <!-- Load scripts -->
-        <script src="ts/index.js"></script>
-        <script src="js/rainingbeer.js"></script> 
+    <!-- Load scripts -->
+    <script src="ts/index.js"></script>
+    <script src="js/flyingimages.js" defer></script> 
 
-        <!-- load favicon -->
-        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Kletspot</a></li>
-                <li><a href="./friday-night.html">VRIJMIBO</a></li>
-            </ul>
-        </nav>
+    <!-- load favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Kletspot</a></li>
+            <li><a href="./friday-night.html">VRIJMIBO</a></li>
+        </ul>
+    </nav>
 
-        <h1 id="mc_question">Vraag</h1>
-        <div id="button_container"></div>
-        <div id="correctness"></div>
-        <button type="button" onclick="next_mc_question()">Geef mij een vraag</button>
-    </body>
+    <h1 id="mc_question">Vraag</h1>
+    <div id="button_container"></div>
+    <div id="correctness"></div>
+    <button type="button" onclick="next_mc_question()">Geef mij een vraag</button>
+
+    <div id="flying-images"></div> 
+</body>
 </html>
