@@ -9,16 +9,19 @@ document.addEventListener("DOMContentLoaded", function () {
         image.style.backgroundImage = `url('./images/beer.png')`;
         image.style.left = `${Math.random() * 100}vw`; // Willekeurige horizontale positie
         image.style.top = `${Math.random() * 100}vh`; // Willekeurige verticale positie
-        image.style.animationDuration = `${Math.random() * 10 + 5}s`; // Willekeurige snelheid
-        image.style.animationDelay = `${Math.random() * 5}s`; // Willekeurige vertraging
+
+        // Maak de animaties rustiger door de duur en vertraging te verhogen
+        image.style.animationDuration = `${Math.random() * 20 + 15}s`; // Verlaag de snelheid (meer tussen 15 en 35 seconden)
+        image.style.animationDelay = `${Math.random() * 10}s`; // Verhoog de vertraging (tussen 0 en 10 seconden)
+
         flyingImagesContainer.appendChild(image);
 
-        // Verwijder de afbeelding na het beëindigen van de animatie om overtollige DOM-elementen te voorkomen
+        // Verwijder de afbeelding na het beëindigen van de animatie
         image.addEventListener('animationend', () => {
             flyingImagesContainer.removeChild(image);
         });
     }
 
-    // Maak elke 200ms een nieuwe vliegende afbeelding
-    setInterval(createFlyingImage, 600);
+    // Maak minder vaak een nieuwe vliegende afbeelding (verhoogde interval naar 3000ms)
+    setInterval(createFlyingImage, 3000);
 });
