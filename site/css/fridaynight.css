@@ -190,8 +190,9 @@ button[type="button"]:hover {
     }
 }
 
-/* Beer rain overlay styling */
-#beer-rain {
+
+/* Flying images overlay styling */
+#flying-images {
     position: fixed;
     top: 0;
     left: 0;
@@ -202,24 +203,19 @@ button[type="button"]:hover {
     overflow: hidden; /* Hide any overflowing content */
 }
 
-/* Animation for beer rain */
-@keyframes rain {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(100%);
-    }
-}
-
-
-.beer-drop {
+.flying-image {
     position: absolute;
     width: 50px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
-    background: url('site\images\beer.png') no-repeat;
+    height: 50px; /* Adjust size as needed */
     background-size: cover;
     opacity: 0.8;
-    animation: rain linear;
+    animation: fly linear;
 }
+
+@keyframes fly {
+    from {
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        transform: translateY(-100vh) translateX(100vw); /* Adjust end position as needed */
+    }
