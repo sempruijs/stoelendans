@@ -36,7 +36,7 @@
               mkdir $out
               mkdir $out/ts
               mkdir $out/images
-              cp ./images/favicon.ico $out/images/favicon.ico
+              cp -r ./images $out
               cp ./index.html $out
               cp ./friday-night.html $out
               cp -r ./css $out/css
