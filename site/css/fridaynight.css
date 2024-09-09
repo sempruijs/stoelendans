@@ -131,6 +131,17 @@ h1#mc_question {
     margin-bottom: 1.5rem;
 }
 
+/* Correctness styles */
+#correctness {
+    display: none; /* Begin hidden */
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw */
+}
+
 /* Styling the container for buttons and content */
 #button_container {
     margin-top: 1.5rem;
