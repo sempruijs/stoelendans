@@ -16,9 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         flyingImagesContainer.appendChild(image);
 
-        // Verwijder de afbeelding na het beëindigen van de animatie
+        // Verwijder de afbeelding na het beëindigen van de animatie om overtollige DOM-elementen te voorkomen
         image.addEventListener('animationend', () => {
-            flyingImagesContainer.removeChild(image);
+            // Verwijder de afbeelding als de animatie is afgelopen
+            if (flyingImagesContainer.contains(image)) {
+                flyingImagesContainer.removeChild(image);
+            }
         });
     }
 
