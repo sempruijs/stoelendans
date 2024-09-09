@@ -216,10 +216,6 @@ button[type="button"]:hover {
     pointer-events: none; /* Ensures it doesn't interfere with other elements */
     z-index: 500; /* Make sure it's behind all other content except the background */
     overflow: hidden; /* Hide any overflowing content */
-    background: rgba(0, 0, 0, 0); /* Transparent background */
-    background-image: url('https://e7.pngegg.com/pngimages/101/35/png-clipart-beer-icon-design-icon-beer-clear-glass-beer-mug-with-beer-food-beer-bottle-thumbnail.png'); /* Path to the beer image */
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /* Animation for beer rain */
