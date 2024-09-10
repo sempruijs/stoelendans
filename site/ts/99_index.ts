@@ -17,10 +17,11 @@ function set_button_container(html_code: string) {
 }
 
 function next_mc_question() {
-    let random_question: MultipleChoice = random_element(mc_questions);
+    let question: MultipleChoice = random_element(mc_questions);
+    let shuffled_question = shuffle_mc_question(question)
     set_button_container("")
-    generate_guess_buttons(random_question)
-    show_mc_question(random_question)
+    generate_guess_buttons(shuffled_question)
+    show_mc_question(shuffled_question)
 }
 
 function generate_guess_buttons(mc: MultipleChoice) {
@@ -75,3 +76,11 @@ function guess_is_correct(guess: Guess): boolean {
     return guess.guess.is_correct
 }
 
+function shuffle_mc_question(mc: MultipleChoice): MultipleChoice {
+    let answers: Answer[] = mc.answers
+    let shuffled_answers = shuffleArray(answers)
+    return {
+        question: mc.question,
+        answers: shuffled_answers
+    }
+}
