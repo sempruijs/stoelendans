@@ -1,7 +1,41 @@
+
+// --- STATE ----
+var open_question_index = 0
+// questions come from the questions.ts file
+var open_questions_order = shuffleArray(open_questions)
+
+var mc_question_index = 0
+// questions come from the mc_questions.ts file
+var mc_questions_order = shuffleArray(mc_questions)
+
+function random_open_question(): string {
+    const length = open_questions_order.length
+    if (open_question_index === length - 1) {
+        // todo: very samll chance that the users will recieve the same question after eachother
+        let new_open_question_order = shuffleArray(open_questions_order)
+        open_question_index = 0
+        return open_questions_order[open_question_index]
+    }
+    open_question_index += 1
+    return open_questions[open_question_index]
+}
+
+function random_mc_question(): MultipleChoice {
+    const length = mc_questions_order.length
+    if (mc_question_index === length - 1) {
+        // todo: very samll chance that the users will recieve the same question after eachother
+        let new_mc_question_order = shuffleArray(mc_questions_order)
+        mc_question_index = 0
+        return mc_questions_order[mc_question_index]
+    }
+    mc_question_index += 1
+    return mc_questions_order[mc_question_index]
+}
+
+
 function next_question() {
-    // questions comes from the questions.ts file
-    let random_question = random_element(questions);
-    show_question(random_question);
+    let question = random_open_question()
+    show_question(question)
 }
 
 function show_question(s: string) {
@@ -17,10 +51,11 @@ function set_button_container(html_code: string) {
 }
 
 function next_mc_question() {
-    let random_question: MultipleChoice = random_element(mc_questions);
+    let question: MultipleChoice = random_mc_question();
+    let shuffled_question = shuffle_mc_question(question)
     set_button_container("")
-    generate_guess_buttons(random_question)
-    show_mc_question(random_question)
+    generate_guess_buttons(shuffled_question)
+    show_mc_question(shuffled_question)
 }
 
 function generate_guess_buttons(mc: MultipleChoice) {
@@ -67,7 +102,6 @@ function mc_question_to_quesses(mc: MultipleChoice): Guess[] {
             guess: a
         }
     })
-    console.log(guesses)
     return guesses
 }
 
@@ -75,3 +109,11 @@ function guess_is_correct(guess: Guess): boolean {
     return guess.guess.is_correct
 }
 
+function shuffle_mc_question(mc: MultipleChoice): MultipleChoice {
+    let answers: Answer[] = mc.answers
+    let shuffled_answers = shuffleArray(answers)
+    return {
+        question: mc.question,
+        answers: shuffled_answers
+    }
+}
