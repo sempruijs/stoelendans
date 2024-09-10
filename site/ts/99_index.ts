@@ -1,7 +1,23 @@
+
+// --- STATE ----
+var open_question_index = 0
+// questions come from the questions.ts file
+var open_questions = shuffleArray(questions)
+
+function random_open_question(): string {
+    const length = open_questions.length
+    if (open_question_index === length - 1) {
+        let new_open_question_order = shuffleArray(open_questions)
+        open_question_index = 0
+        return open_questions[open_question_index]
+    }
+    open_question_index += 1
+    return open_questions[open_question_index]
+}
+
 function next_question() {
-    // questions comes from the questions.ts file
-    let random_question = random_element(questions);
-    show_question(random_question);
+    let question = random_open_question()
+    show_question(question)
 }
 
 function show_question(s: string) {
@@ -68,7 +84,6 @@ function mc_question_to_quesses(mc: MultipleChoice): Guess[] {
             guess: a
         }
     })
-    console.log(guesses)
     return guesses
 }
 
