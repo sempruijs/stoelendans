@@ -2,18 +2,19 @@
 // --- STATE ----
 var open_question_index = 0
 // questions come from the questions.ts file
-var open_questions = shuffleArray(questions)
+var open_questions_order = shuffleArray(open_questions)
 
 var mc_question_index = 0
 // questions come from the mc_questions.ts file
 var mc_questions_order = shuffleArray(mc_questions)
 
 function random_open_question(): string {
-    const length = open_questions.length
+    const length = open_questions_order.length
     if (open_question_index === length - 1) {
-        let new_open_question_order = shuffleArray(open_questions)
+        // todo: very samll chance that the users will recieve the same question after eachother
+        let new_open_question_order = shuffleArray(open_questions_order)
         open_question_index = 0
-        return open_questions[open_question_index]
+        return open_questions_order[open_question_index]
     }
     open_question_index += 1
     return open_questions[open_question_index]
@@ -22,6 +23,7 @@ function random_open_question(): string {
 function random_mc_question(): MultipleChoice {
     const length = mc_questions_order.length
     if (mc_question_index === length - 1) {
+        // todo: very samll chance that the users will recieve the same question after eachother
         let new_mc_question_order = shuffleArray(mc_questions_order)
         mc_question_index = 0
         return mc_questions_order[mc_question_index]
