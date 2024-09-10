@@ -99,6 +99,16 @@ const questions = [
 "Wat zou je doen als je je droomhuis kon bouwen?",
 "Wat is je favoriete activiteit in de zomer?",
 "Wat is je favoriete kledingstuk?",
-"Wat zou je doen als je morgen geen verplichtingen had?"
+"Wat zou je doen als je morgen geen verplichtingen had?",
+"Hoe is het Nederlandse onderwijssysteem opgebouwd?",
+"Hoe verschilt het basisonderwijs in Nederland van het voortgezet onderwijs?",
+"Op welke leeftijd beginnen kinderen met school in Nederland?",
+"Wat is het verschil tussen openbare, en privé scholen in Nederland?",
+"Hoe werkt het Nederlandse beoordelingssysteem in het basis-, en voortgezet onderwijs?",
+"Welke mogelijkheden hebben leerlingen na het afronden van het voortgezet onderwijs in Nederland?",
+"Hoe ondersteunt het Nederlandse schoolsysteem internationale, leerlingen of niet-Nederlandstaligen?",
+"Welke rol spelen middelbare, beroepsopleidingen (MBO) in het Nederlandse onderwijssysteem?",
+"Hoe worden leerlingen met speciale, behoeften op scholen in Nederland ondersteund?",
+"Wat zijn de meest populaire, vakken in het voortgezet onderwijs in Nederland, en hoe worden deze door leerlingen gekozen?"
 ]
 /* cSpell:enable */
