@@ -16,46 +16,62 @@ function set_button_container(html_code: string) {
     document.getElementById("button_container").innerHTML = html_code;
 }
 
-function show_correctness(result: boolean) {
-    var answer = "";
-    if (result) {
-        answer = "Goed!";
-    } else {
-        answer = "Fout";
-    }
-    document.getElementById("correctness").textContent = answer;
-}
-
-function reset_correctness() {
-    document.getElementById("correctness").textContent = "";
-}
-
 function next_mc_question() {
     let random_question: MultipleChoice = random_element(mc_questions);
-    show_mc_question(random_question);
-    let new_buttons = generate_buttons(random_question);
-    console.log(new_buttons);
-    set_button_container(new_buttons);
-    reset_correctness();
+    set_button_container("")
+    generate_guess_buttons(random_question)
+    show_mc_question(random_question)
 }
 
-function generate_button(answer: Answer): string {
-    if (answer.is_correct) {
-        return "<button onclick=\"show_correctness(true)\">" + answer.value + "</button>";
+function generate_guess_buttons(mc: MultipleChoice) {
+    let guesses = mc_question_to_quesses(mc)
+    guesses.forEach(g => {
+        create_button(g)
+    })
+}
+
+function create_button(guess: Guess) {
+    const button = document.createElement("button");
+    button.textContent = guess.guess.value;
+
+    // Attach event listener to handle the guess
+    button.onclick = () => show_guess(guess);
+
+    // Append the button to a container
+    const container = document.getElementById("button_container");
+    if (container) {
+        container.appendChild(button);
     }
-    return "<button onclick=\"show_correctness(false)\")\">" + answer.value + "</button>";
 }
 
-function generate_buttons(mc: MultipleChoice): string {
-    const buttons: string[] = mc.answers.map(a => {
-        return generate_button(a);
-    });
-
-    const shuffled_buttons = shuffleArray(buttons);
-
-    return shuffled_buttons.join();
+// TODO: split generating buttons and writing buttons in seperate functions
+function show_guess(guess: Guess) {
+    var buttons = "";
+    for (var answer of guess.mc.answers) {
+        const guessed_class = answer === guess.guess ? "guessed_answer" : ""
+        const correctness_class = answer.is_correct ? "correct_answer" : "incorrect_answer"
+        const button = "<button onclick\"\" class=\"" + correctness_class + " " + guessed_class + "\">" + answer.value + "</button>"
+        buttons += button
+    }
+    set_button_container(buttons)
 }
 
 function random_element<T>(xs: T[]): T {
     return xs[Math.floor(Math.random() * xs.length)];
 }
+
+function mc_question_to_quesses(mc: MultipleChoice): Guess[] {
+    let guesses = mc.answers.map(a => {
+        return {
+            mc: mc,
+            guess: a
+        }
+    })
+    console.log(guesses)
+    return guesses
+}
+
+function guess_is_correct(guess: Guess): boolean {
+    return guess.guess.is_correct
+}
+

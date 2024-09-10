@@ -8,3 +8,8 @@ interface Answer {
     is_correct: boolean
 }
 
+interface Guess {
+    mc: MultipleChoice,
+    guess: Answer
+}
+
