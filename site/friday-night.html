@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Stoelendans | Vrijdag avond</title>
 
-        <!-- Laad CSS -->
-        <link rel="stylesheet" href="./css/fridaynight.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoelendans | Vrijdag avond</title>
 
-        <!-- Laad favicon -->
-        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <!-- Laad CSS -->
+    <link rel="stylesheet" href="./css/fridaynight.css">
 
-        <!-- Laad het gegenereerde JavaScript van de TypeScript-bestanden -->
-        <script src="./ts/flyingimages.js" defer></script> 
-        <script src="./ts/index.js"></script>
-        
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Kletspot</a></li>
-                <li><a href="./friday-night.html">VRIJMIBO</a></li>
-            </ul>
-        </nav>
+    <!-- Laad favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 
-        <h1 id="mc_question">Vraag</h1>
-        <div id="button_container"></div>
-        <div id="correctness"></div>
-        <button type="button" onclick="next_mc_question()">Geef mij een vraag</button>
+    <!-- Laad het gegenereerde JavaScript van de TypeScript-bestanden -->
+    <script src="./ts/flyingimages.js" defer></script>
+    <script src="./ts/index.js"></script>
 
-        <!-- Container voor vliegende afbeeldingen -->
-        <div id="flying-images"></div>
-    </body>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Kletspot</a></li>
+            <li><a href="./friday-night.html">VRIJMIBO</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="mc_question" aria-live="assertive">Klik op de knop voor een vraag</h1>
+    <div id="button_container"></div>
+    <div id="correctness"></div>
+    <button type="button" onclick="next_mc_question()">Geef mij een vraag</button>
+
+    <!-- Container voor vliegende afbeeldingen -->
+    <div id="flying-images"></div>
+</body>
+
 </html>
