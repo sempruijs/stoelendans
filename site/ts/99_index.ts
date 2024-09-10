@@ -4,6 +4,10 @@ var open_question_index = 0
 // questions come from the questions.ts file
 var open_questions = shuffleArray(questions)
 
+var mc_question_index = 0
+// questions come from the mc_questions.ts file
+var mc_questions_order = shuffleArray(mc_questions)
+
 function random_open_question(): string {
     const length = open_questions.length
     if (open_question_index === length - 1) {
@@ -14,6 +18,18 @@ function random_open_question(): string {
     open_question_index += 1
     return open_questions[open_question_index]
 }
+
+function random_mc_question(): MultipleChoice {
+    const length = mc_questions_order.length
+    if (mc_question_index === length - 1) {
+        let new_mc_question_order = shuffleArray(mc_questions_order)
+        mc_question_index = 0
+        return mc_questions_order[mc_question_index]
+    }
+    mc_question_index += 1
+    return mc_questions_order[mc_question_index]
+}
+
 
 function next_question() {
     let question = random_open_question()
@@ -33,7 +49,7 @@ function set_button_container(html_code: string) {
 }
 
 function next_mc_question() {
-    let question: MultipleChoice = random_element(mc_questions);
+    let question: MultipleChoice = random_mc_question();
     let shuffled_question = shuffle_mc_question(question)
     set_button_container("")
     generate_guess_buttons(shuffled_question)
