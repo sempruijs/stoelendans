@@ -6,7 +6,8 @@
 }
 
 /* Ensure the body takes up the full height of the viewport */
-html, body {
+html,
+body {
     background-image: url('https://image.parool.nl/224418457/width/2480/peter-bout-marketingmanager-van-hotel-arena-voorheen-was-de');
     background-size: cover;
     background-position: center;
@@ -19,9 +20,10 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
-    color: white; /* Ensures white text for better contrast */
+    color: white;
+    /* Ensures white text for better contrast */
 }
 
 /* Container for flying images */
@@ -31,21 +33,26 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Ensure it doesn't interfere with clicking other elements */
-    z-index: 1; /* Ensure it's behind main content but above background */
-    overflow: hidden; /* Hide overflowing images */
+    pointer-events: none;
+    /* Ensure it doesn't interfere with clicking other elements */
+    z-index: 1;
+    /* Ensure it's behind main content but above background */
+    overflow: hidden;
+    /* Hide overflowing images */
 }
 
 /* Flying image styling */
 .flying-image {
     position: absolute;
-    width: 50px; /* Adjust image size as needed */
+    width: 50px;
+    /* Adjust image size as needed */
     height: 80px;
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.9;
     animation: fly linear infinite;
-    z-index: 1; /* Keep it behind the content */
+    z-index: 1;
+    /* Keep it behind the content */
 }
 
 /* Flying animation */
@@ -53,6 +60,7 @@ html, body {
     from {
         transform: translate(0, 0) rotate(0deg);
     }
+
     to {
         transform: translate(100vw, 100vh) rotate(360deg);
     }
@@ -61,17 +69,22 @@ html, body {
 /* Navigation bar styling */
 nav {
     width: 100%;
-    background-color: #1E1E2F; /* Dark background for the nav bar */
-    position: fixed; /* Fix the nav bar to the top */
+    background-color: #1E1E2F;
+    /* Dark background for the nav bar */
+    position: fixed;
+    /* Fix the nav bar to the top */
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensures the nav bar stays on top */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for nav bar */
+    z-index: 1000;
+    /* Ensures the nav bar stays on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for nav bar */
 }
 
 nav ul {
     display: flex;
-    justify-content: center; /* Center the navigation items */
+    justify-content: center;
+    /* Center the navigation items */
     padding: 1rem;
     list-style-type: none;
     margin: 0;
@@ -90,30 +103,38 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #9D4EDD; /* Background color on hover */
-    border-radius: 5px; /* Rounded corners on hover */
+    background-color: #9D4EDD;
+    /* Background color on hover */
+    border-radius: 5px;
+    /* Rounded corners on hover */
     color: #FFF;
 }
 
 /* General text styling */
-h1, p {
+h1,
+p {
     z-index: 1000;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds a shadow to text for readability on bright backgrounds */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    /* Adds a shadow to text for readability on bright backgrounds */
 }
 
 /* Styling the container for buttons and content */
 #button_container {
     margin-top: 1.5rem;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adds a semi-transparent background */
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow around the container */
-    z-index: 1000; /* Ensure it is above other elements like buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Adds a shadow around the container */
+    z-index: 1000;
+    /* Ensure it is above other elements like buttons */
 }
 
 /* Button styling */
 button {
-    background-color: #5A189A; /* New deep purple */
+    background-color: #5A189A;
+    /* New deep purple */
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -123,11 +144,28 @@ button {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
     margin-top: 1em;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
 }
 
 /* Button hover effect */
 button:hover {
-    background-color: #9D4EDD; /* Lighter purple on hover */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    background-color: #9D4EDD;
+    /* Lighter purple on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow on hover */
+}
+
+.incorrect_answer {
+    background-color: #f00202;
+}
+
+.correct_answer {
+    background-color: #05ea4a;
+}
+
+.guessed_answer {
+    border: 5px solid black;
+    /* 2px wide solid black border */
+    padding: 10px;
 }
