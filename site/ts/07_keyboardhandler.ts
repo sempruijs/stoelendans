@@ -1,7 +1,7 @@
 function handlekeyboardinput(event: KeyboardEvent): void     {
     const key = event.key;
     
-    if (key === ' ') {
+    if (event.key === ' ') {
         next_question()  ;
       }
 
