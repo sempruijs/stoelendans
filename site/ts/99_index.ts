@@ -36,16 +36,20 @@ function random_mc_question(): MultipleChoice {
 function next_question() {
     let question = random_open_question()
     show_question(question)
+    play_whoosh_sound()
+}
 
+function play_whoosh_sound() {
     const buttonElement = document.getElementById('questionButton') as HTMLButtonElement;
     const clickSound = document.getElementById('clickSound') as HTMLAudioElement;
 
-buttonElement.addEventListener('click', () => {
-  if (!clickSound.paused) {
-    return; 
-  }
-  clickSound.play();
-});
+    buttonElement.addEventListener('click', () => {
+        if (!clickSound.paused) {
+            return;
+        }
+        console.log("test")
+        clickSound.play()
+    });
 }
 
 function show_question(s: string) {
