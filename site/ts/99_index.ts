@@ -2,6 +2,17 @@ function next_question() {
     // questions comes from the questions.ts file
     let random_question = random_element(questions);
     show_question(random_question);
+    
+    const buttonElement = document.getElementById('questionButton') as HTMLButtonElement;
+    const clickSound = document.getElementById('clickSound') as HTMLAudioElement;
+
+buttonElement.addEventListener('click', () => {
+  if (!clickSound.paused) {
+    return; 
+  }
+  clickSound.play();
+});
+
 }
 
 function show_question(s: string) {
