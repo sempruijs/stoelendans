@@ -3,6 +3,7 @@ function handlekeyboardinput(event: KeyboardEvent): void     {
     
     if (event.key === ' ') {
         next_question()  ;
+        next_mc_question()
       }
 
 
