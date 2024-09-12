@@ -15,7 +15,6 @@
     <!-- Laad het gegenereerde JavaScript van de TypeScript-bestanden -->
     <script src="./ts/flyingimages.js" defer></script>
     <script src="./ts/index.js"></script>
-
 </head>
 
 <body>
@@ -33,6 +32,22 @@
 
     <!-- Container voor vliegende afbeeldingen -->
     <div id="flying-images"></div>
+
+    <!-- Dark mode toggle -->
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeToggle">
+        <label for="darkModeToggle"></label>
+    </div>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode', darkModeToggle.checked);
+        });
+    </script>
 </body>
 
 </html>
