@@ -37,6 +37,8 @@
               mkdir $out/ts
               mkdir $out/images
               cp -r ./images $out
+              mkdir $out/sound
+              cp -r ./sound $out
               cp ./index.html $out
               cp ./friday-night.html $out
               cp -r ./css $out/css
