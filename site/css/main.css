@@ -8,20 +8,19 @@
 /* Ensure the body takes up the full height of the viewport */
 html, body {
     background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjc1MHpqejQxN2ppNTh0YnljeGlhOW1oeTR4ZTMyODB6d2htMTIxNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26AHMBTzc1qJgFfDW/giphy.gif'); /* Sets the path to the background image */
-    background-size: cover;      /* Makes sure that the images fills the entire screen*/
+    background-size: cover;      /* Ensures that the image fills the entire screen */
     background-position: center; /* Center background image */
-    background-repeat: no-repeat; /* prevents background image from repeating */
-    background-attachment: fixed; /* Makes sure that the background images stays in place while scrolling (optional)*/
-    height: 100vh; /* responsible for setting the correct height for the background image*/
+    background-repeat: no-repeat; /* Prevents background image from repeating */
+    background-attachment: fixed; /* Makes sure that the background image stays in place while scrolling */
+    height: 100vh; /* Responsible for setting the correct height for the background image */
     margin: 0;
     padding: 0;
-        font-family: 'Roboto', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; 
-        flex-direction: column; /* Zorgt ervoor dat alles onder elkaar komt */
-        text-align: center;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;
 }
 
 /* Navigation bar styling */
@@ -60,7 +59,6 @@ nav ul li a:hover {
     border-radius: 5px; /* Rounded corners on hover */
     color: #FFF;
 }
-
 
 /* Container styling */
 .container {
@@ -105,7 +103,6 @@ button {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     outline: none;
     margin-top: 1em;
-
 }
 
 /* Button hover effect */
@@ -128,20 +125,80 @@ button:hover {
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
     }
+}
+
 /* Light mode */
 @media (prefers-color-scheme: light) {
     body {
         background-color: white;
         color: black;
     }
+
+    nav {
+        background-color: #ffffff; /* Lighter nav bar for light mode */
+    }
+
+    nav ul li a {
+        color: black; /* Dark text for light mode */
+    }
+
+    nav ul li a:hover {
+        background-color: #6a0dad; /* Adjust hover color for light mode */
+    }
+
+    .container {
+        background-color: white;
+        border-color: #6a0dad;
+    }
+
+    h1#question {
+        color: #6a0dad;
+    }
+
+    button {
+        background-color: #700cb7;
+        color: white;
+    }
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: black;
+        background-color: #121212; /* Dark background */
         color: white;
     }
-}
 
+    nav {
+        background-color: #1E1E2F; /* Dark nav bar */
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    header.container {
+        background-color: #1E1E1E;
+    }
+
+    nav ul li a:hover {
+        background-color: #9D4EDD;
+    }
+
+    .container {
+        background-color: #1E1E1E;
+        border-color: #9D4EDD;
+    }
+
+    main.container p {
+        color: white;
+    }
+
+    h1#question {
+        color: #9D4EDD;
+    }
+
+    button {
+        background-color: #9D4EDD;
+        color: white;
+    }
 }
