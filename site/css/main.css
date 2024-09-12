@@ -202,3 +202,39 @@ button:hover {
         color: white;
     }
 }
+
+@media (forced-colors: active) {
+    html, body {
+        background-image: none; /* Remove the background animation */
+        background-color: black; /* Set background to black */
+        color: white; /* Ensure text is visible in high contrast mode */
+    }
+
+    nav {
+        background-color: black; /* Nav bar matches the high contrast background */
+    }
+
+    nav ul li a {
+        color: white; /* Ensure navigation links are visible */
+    }
+
+    .container {
+        background-color: black;
+        border-color: white;
+    }
+
+    h1#question {
+        color: white;
+    }
+
+    button {
+        background-color: white;
+        color: black;
+        border-color: white;
+    }
+
+    /* Optionally, disable shadows if needed for clarity in high contrast mode */
+    .container, nav {
+        box-shadow: none;
+    }
+}
