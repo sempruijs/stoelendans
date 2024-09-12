@@ -6,8 +6,7 @@
 }
 
 /* Ensure the body takes up the full height of the viewport */
-html,
-body {
+html, body {
     background-image: url('https://image.parool.nl/224418457/width/2480/peter-bout-marketingmanager-van-hotel-arena-voorheen-was-de');
     background-size: cover;
     background-position: center;
@@ -23,7 +22,14 @@ body {
     flex-direction: column;
     text-align: center;
     color: white;
-    /* Ensures white text for better contrast */
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Dark mode styling */
+body.dark-mode {
+    background-color: #121212;
+    background-image: none;
+    color: #f0f0f0;
 }
 
 /* Dark mode styling */
@@ -45,25 +51,20 @@ body.dark-mode {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    /* Ensure it doesn't interfere with clicking other elements */
     z-index: 1;
-    /* Ensure it's behind main content but above background */
     overflow: hidden;
-    /* Hide overflowing images */
 }
 
 /* Flying image styling */
 .flying-image {
     position: absolute;
     width: 50px;
-    /* Adjust image size as needed */
     height: 80px;
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.9;
     animation: fly linear infinite;
     z-index: 1;
-    /* Keep it behind the content */
 }
 
 /* Flying animation */
@@ -71,7 +72,6 @@ body.dark-mode {
     from {
         transform: translate(0, 0) rotate(0deg);
     }
-
     to {
         transform: translate(100vw, 100vh) rotate(360deg);
     }
@@ -81,21 +81,16 @@ body.dark-mode {
 nav {
     width: 100%;
     background-color: #1E1E2F;
-    /* Dark background for the nav bar */
     position: fixed;
-    /* Fix the nav bar to the top */
     top: 0;
     left: 0;
     z-index: 1000;
-    /* Ensures the nav bar stays on top */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow for nav bar */
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    /* Center the navigation items */
     padding: 1rem;
     list-style-type: none;
     margin: 0;
@@ -115,18 +110,14 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #9D4EDD;
-    /* Background color on hover */
     border-radius: 5px;
-    /* Rounded corners on hover */
     color: #FFF;
 }
 
 /* General text styling */
-h1,
-p {
+h1, p {
     z-index: 1000;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    /* Adds a shadow to text for readability on bright backgrounds */
 }
 
 /* Styling the container for buttons and content */
@@ -134,18 +125,14 @@ p {
     margin-top: 1.5rem;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Adds a semi-transparent background */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Adds a shadow around the container */
     z-index: 1000;
-    /* Ensure it is above other elements like buttons */
 }
 
 /* Button styling */
 button {
     background-color: #5A189A;
-    /* New deep purple */
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -156,41 +143,64 @@ button {
     outline: none;
     margin-top: 1em;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow */
 }
 
 /* Button hover effect */
 button:hover {
     background-color: #9D4EDD;
-    /* Lighter purple on hover */
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    /* Enhanced shadow on hover */
 }
 
-.incorrect_answer {
-    background-color: #f00202;
+/* Dark mode button toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
 }
 
-.correct_answer {
-    background-color: #05ea4a;
+.dark-mode-toggle input {
+    display: none;
 }
 
-.guessed_answer {
-    border: 5px solid black;
-    /* 2px wide solid black border */
-    padding: 10px;
+.dark-mode-toggle label {
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    display: inline-block;
+    border-radius: 34px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Reduced motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-    .flying-image {
-        animation: none !important;
-        display: none !important;
-    }
+.dark-mode-toggle label::before {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: transform 0.3s ease;
+}
 
-    body {
-        background-image: none !important;
-    }
+.dark-mode-toggle input:checked + label {
+    background-color: #2196F3;
+}
+
+.dark-mode-toggle input:checked + label::before {
+    transform: translateX(26px);
+}
+
+/* Dark mode class toggle for content */
+body.dark-mode nav {
+    background-color: #333;
+}
+
+body.dark-mode h1, body.dark-mode p, body.dark-mode nav ul li a {
+    color: #f0f0f0;
 }
 
 
