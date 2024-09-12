@@ -169,3 +169,15 @@ button:hover {
     /* 2px wide solid black border */
     padding: 10px;
 }
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .flying-image {
+        animation: none !important;
+        display: none !important;
+    }
+
+    body {
+        background-image: none !important;
+    }
+}
