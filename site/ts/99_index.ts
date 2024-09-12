@@ -131,3 +131,5 @@ function shuffle_mc_question(mc: MultipleChoice): MultipleChoice {
         answers: shuffled_answers
     }
 }
+
+const backgroundMusic = document.getElementById('backgroundMusic') as HTMLAudioElement;

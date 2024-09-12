@@ -28,7 +28,10 @@
     <h1 id="mc_question" aria-live="assertive">Klik op de knop voor een vraag</h1>
     <div id="button_container"></div>
     <div id="correctness"></div>
-    <button type="button" onclick="next_mc_question()">Geef mij een vraag</button>
+    <button type="button" id="questionButton" onclick="next_mc_question()">Geef mij een vraag</button>
+    <audio id="clickSound">
+        <source src="./sound/whoosh.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- Container voor vliegende afbeeldingen -->
     <div id="flying-images"></div>
@@ -49,6 +52,16 @@
         body.classList.toggle('dark-mode', darkModeToggle.checked);
     });
 </script>
+
+<!-- Background Music -->
+
+<audio id="backgroundMusic" loop autoplay>
+    <source src="/site/sound/The Blues .mp3" type="audio/mpeg">
+    
+</audio>
+    
+
+
 
 </body>
 
