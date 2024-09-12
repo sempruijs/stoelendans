@@ -32,11 +32,11 @@
 
     <!-- Container voor vliegende afbeeldingen -->
     <div id="flying-images"></div>
-
-    <!-- Dark mode toggle -->
+ 
+       <!-- Dark mode toggle -->
     <div class="dark-mode-toggle">
-        <input type="checkbox" id="darkModeToggle">
-        <label for="darkModeToggle"></label>
+    <input type="checkbox" id="darkModeToggle">
+    <label for="darkModeToggle"></label>
     </div>
 
     <script>
@@ -45,9 +45,11 @@
         const body = document.body;
 
         darkModeToggle.addEventListener('change', () => {
-            body.classList.toggle('dark-mode', darkModeToggle.checked);
-        });
-    </script>
+
+        body.classList.toggle('dark-mode', darkModeToggle.checked);
+    });
+</script>
+
 </body>
 
 </html>
