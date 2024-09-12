@@ -238,3 +238,10 @@ button:hover {
         box-shadow: none;
     }
 }
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    html, body {
+        background-image: none; /* Remove the background animation */
+    }
+}
