@@ -70,6 +70,7 @@ function next_mc_question() {
     set_button_container("")
     generate_guess_buttons(shuffled_question)
     show_mc_question(shuffled_question)
+    toggleButtonVisibility(next_mc_question_button, false)
 }
 
 function generate_guess_buttons(mc: MultipleChoice) {
@@ -103,6 +104,7 @@ function show_guess(guess: Guess) {
         buttons += button
     }
     set_button_container(buttons)
+    toggleButtonVisibility(next_mc_question_button, true)
 }
 
 function random_element<T>(xs: T[]): T {
@@ -131,3 +133,13 @@ function shuffle_mc_question(mc: MultipleChoice): MultipleChoice {
         answers: shuffled_answers
     }
 }
+
+function toggleButtonVisibility(button: HTMLButtonElement, visible: boolean) {
+    if (visible) {
+        button.style.display = "block";  // Show the button
+    } else {
+        button.style.display = "none";   // Hide the button
+    }
+}
+
+const next_mc_question_button = document.getElementById("next_mc_question") as HTMLButtonElement;
