@@ -6,7 +6,8 @@
 }
 
 /* Ensure the body takes up the full height of the viewport */
-html, body {
+html,
+body {
     background-image: url('https://image.parool.nl/224418457/width/2480/peter-bout-marketingmanager-van-hotel-arena-voorheen-was-de');
     background-size: cover;
     background-position: center;
@@ -72,6 +73,7 @@ body.dark-mode {
     from {
         transform: translate(0, 0) rotate(0deg);
     }
+
     to {
         transform: translate(100vw, 100vh) rotate(360deg);
     }
@@ -115,7 +117,8 @@ nav ul li a:hover {
 }
 
 /* General text styling */
-h1, p {
+h1,
+p {
     z-index: 1000;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
@@ -186,11 +189,11 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
-.dark-mode-toggle input:checked + label {
+.dark-mode-toggle input:checked+label {
     background-color: #2196F3;
 }
 
-.dark-mode-toggle input:checked + label::before {
+.dark-mode-toggle input:checked+label::before {
     transform: translateX(26px);
 }
 
@@ -199,7 +202,9 @@ body.dark-mode nav {
     background-color: #333;
 }
 
-body.dark-mode h1, body.dark-mode p, body.dark-mode nav ul li a {
+body.dark-mode h1,
+body.dark-mode p,
+body.dark-mode nav ul li a {
     color: #f0f0f0;
 }
 
@@ -239,11 +244,11 @@ body.dark-mode h1, body.dark-mode p, body.dark-mode nav ul li a {
     transition: transform 0.3s ease;
 }
 
-.dark-mode-toggle input:checked + label {
+.dark-mode-toggle input:checked+label {
     background-color: #2196F3;
 }
 
-.dark-mode-toggle input:checked + label::before {
+.dark-mode-toggle input:checked+label::before {
     transform: translateX(26px);
 }
 
@@ -252,6 +257,20 @@ body.dark-mode nav {
     background-color: #333;
 }
 
-body.dark-mode h1, body.dark-mode p, body.dark-mode nav ul li a {
+body.dark-mode h1,
+body.dark-mode p,
+body.dark-mode nav ul li a {
     color: #f0f0f0;
+}
+
+.guessed_answer {
+    background-color: yellow;
+}
+
+.incorrect_answer {
+    background-color: red;
+}
+
+.correct_answer {
+    background-color: green;
 }
