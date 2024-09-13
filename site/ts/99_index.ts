@@ -143,3 +143,5 @@ function toggleButtonVisibility(button: HTMLButtonElement, visible: boolean) {
 }
 
 const next_mc_question_button = document.getElementById("next_mc_question") as HTMLButtonElement;
+
+const backgroundMusic = document.getElementById('backgroundMusic') as HTMLAudioElement;
