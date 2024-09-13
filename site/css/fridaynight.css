@@ -29,13 +29,6 @@ body {
 /* Dark mode styling */
 body.dark-mode {
     background-color: #121212;
-    background-image: none;
-    color: #f0f0f0;
-}
-
-/* Dark mode styling */
-body.dark-mode {
-    background-color: #121212;
     background-size: 100vw 100vh;
     background-position: center;
     background-repeat: repeat;
