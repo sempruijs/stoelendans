@@ -36,11 +36,10 @@ body.dark-mode {
 /* Dark mode styling */
 body.dark-mode {
     background-color: #121212;
-    background-image: url('https://i.etsystatic.com/15939868/r/il/01c09d/5134887819/il_fullxfull.5134887819_y136.jpg');
-    background-size: cover;
+    background-size: 100vw 100vh;
     background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-repeat: repeat;
+    background-attachment: local;
     color: #f0f0f0;
 }
 
